@@ -1,0 +1,64 @@
+/*wrap for content, shift text down a line when it reaches the edge*/
+#content_wrap{
+	flex-direction: column;
+	justify-content: flex-start;
+	overflow: auto;
+}
+/*wrapper to hold class table*/
+#class_wrapper{
+	display: flex;
+	justify-content: center;
+	width: 65%;
+	margin-top: 85px;
+	padding: 15px;
+	overflow: auto;
+}
+/*wrapper for functions to act on class*/
+#function_wrap{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 65%;
+	min-height: 120px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 15px;
+}
+#function_wrap label{
+	width:15%;
+}
+/*predefinitions for table*/
+.class-table{
+	top: 10%;
+	width: 90%;
+	border: solid 1px #000;
+	overflow-y: scroll;
+	overflow-x: scroll;
+	border-collapse: collapse;
+   	border-spacing: 0px;
+}
+.class-table tr:first-child td{
+	font-weight: bold;
+}
+.class-table td{
+	text-align: center;
+	padding:5px;
+	border: solid 1px #000;
+}
+
+.button{
+	height:30px;
+	width:20%;
+	margin-top: 0.5%;
+	margin-bottom: 0.5%;
+	margin-right: 10%;
+	background-color: #5B9BD5;
+	color: #FFF;
+	font-style: bold;
+	line-height: 100%;
+	border: 1px solid #5B9BD5;
+	border-radius : 6px;
+	moz-border-radius : 6px;
+	text-align: center;
+	cursor: pointer;
+}

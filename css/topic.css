@@ -1,0 +1,26 @@
+/* modified content wrap for topic pages */
+#content_wrap{
+	flex-direction: column;
+	justify-content:flex-start;
+	height:100%;
+}
+/* headings */
+h3{
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+h2{
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+/* info box formatting */
+#info_box{
+	margin-top:calc(2% + 55px);
+	width: calc(80% - 4%);
+	padding: 2%;
+	border-radius: 5px;
+	font-size: 100%;
+}
+#info_box li{
+	margin-left: 2em;
+}

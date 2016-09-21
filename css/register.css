@@ -1,0 +1,68 @@
+/*container for input divs and submit button*/
+#register_container{
+	width:70%;
+	min-height:65%;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  	align-items: center;
+	overflow: hidden;
+}
+/*form encompassing the entire page*/
+#generalform{
+	width:100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  	align-items: center;
+}
+/*predefinitions for input fields and submit button*/
+.field{
+	width:100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+  	align-items: center;
+}
+.field label{
+	width:20%;
+	font-size:1.5vw;
+	color: #5B9BD5;
+}
+.field input{
+	width:60%;
+	height:30%;
+	padding: 5px;
+	border: 2px solid #5B9BD5;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 10px 18px -12px #173A59;
+  	box-shadow: 0px 10px 18px -12px #173A59;
+  	font-size: 1vw;
+}
+.button{
+	height:30px;
+	width:20%;
+	margin-top: 0.5%;
+	margin-bottom: 0.5%;
+	background-color: #5B9BD5;
+	color: #FFF;
+	font-style: bold;
+	line-height: 100%;
+	border: 1px solid #5B9BD5;
+	border-radius : 6px;
+	moz-border-radius : 6px;
+	text-align: center;
+	cursor: pointer;
+}
+/* NEEDS FIXING - Allignment issues
+.hint { 
+  display: none;
+}
+.field:hover .hint{
+  display: block;
+  text-align: center;
+}
+*/

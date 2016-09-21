@@ -1,0 +1,52 @@
+<div class="slideout-menu">
+	<h3><a href="index.php">Home</a><a href="#" class="slideout-menu-toggle">X</a></h3>
+	<ul>
+		<!--if statements to define which buttons should be displayed on the nav bar: first being for login or log out being displayed as well as whether add class should be displayed for a teacher, the second if statement defines what class options should be displayed if a teacher is logged in-->
+		<?php if(!empty($_SESSION['UserID']) && ($_SESSION['AccType'] == "T")){ 
+			echo '<li><a href="logout.php">Logout</a></li>
+				  <li><a href="addclass.php">Add Class</a></li>';
+		}
+		else if(!empty($_SESSION['UserID']) && ($_SESSION['AccType'] == "S")){ 
+			echo '<li><a href="logout.php">Logout</a></li>
+					<li><a href="bullying.php">CyberBullying</a></li>
+					<li><a href="practice.php">Good Security Practice</a></li>
+					<li><a href="social.php">Social Engineering</a></li>
+					<li><a href="malware.php">Malware</a></li>
+					<li><a href="hacking.php">Hacking</a></li>';
+		}
+		else
+		{
+			echo '<li><a href="login_teacher.php">Teacher Login</a></li>
+				  <li><a href="login_student.php">Student Login</a></li>
+				  <li><a href="register.php">Register</a></li>
+					<li><a href="bullying.php">CyberBullying</a></li>
+					<li><a href="practice.php">Good Security Practice</a></li>
+					<li><a href="social.php">Social Engineering</a></li>
+					<li><a href="malware.php">Malware</a></li>
+					<li><a href="hacking.php">Hacking</a></li>';
+		}
+
+		if(!empty($_SESSION['UserID']) && ($_SESSION['AccType'] == "T")) {
+			$UserID = $_SESSION['UserID'];
+			$result = mysql_query("SELECT * FROM Teacher_Class WHERE UserID='$UserID'") or die(mysql_error());
+			while ($row = mysql_fetch_array($result, MYSQL_NUM)){
+				$rownum ++;
+			}
+			for ($i=0; $i < $rownum; $i++) {
+					$result = mysql_query("SELECT * FROM Teacher_Class WHERE UserID='$UserID'") or die(mysql_error());
+					$classname = mysql_result($result,$i,"Class");
+					$url_classname = preg_replace('/\s+/', '', $classname);
+					$url_user = $UserID;
+			 		echo '<li><a href="class.php?u=';
+			 		echo $url_user;
+			 		echo '&c=';
+			 		echo $url_classname;
+			 		echo ' ">Class: ';
+			 		echo $classname;
+			 		echo '</a></li>';
+			} 	
+		}
+
+		?>
+	</ul>
+</div>

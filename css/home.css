@@ -1,0 +1,36 @@
+/* modified content wrap from main.css */
+#content_wrap{
+  flex-direction:column;
+  justify-content:flex-start;
+}
+/* upper wrapper for storing the greeting text */
+#upper_wrapper{
+  margin-top:calc(2% + 55px);
+  width: calc(90% - 2%);
+  height: 15%;
+  padding: 1%;
+  border-radius: 5px;
+}
+/* lower wrapper for holding the information box and twitter feed box*/
+#lower_wrapper{
+  display: flex;
+  flex-direction:row;
+  padding-top: 1%;
+  width: 90%;
+  height: 60%;
+}
+/* box for summary of website */
+#info_box{
+  width: calc(70% - 2%);
+  height: calc(95% - 2%);
+  padding: 1%;
+  margin-top: auto;
+  border-radius: 5px;
+}
+/* box for twitter feed */
+#twitter_box{
+  width: 28%;
+  height: 95%;
+  margin-left:2%;
+  border-radius: 5px;
+}
